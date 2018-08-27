@@ -23,4 +23,4 @@ Run
 gulp css
 ```
 
-to compile you css.
+to compile your css.
