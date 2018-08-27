@@ -1,5 +1,6 @@
 # postcss-gulpfile
-A gulpfile.js using postCss. This gulpfile compiles sass like syntax to css, and then minifys for production. Use two folders (initial & final are used currently but change these to whatever you use), one for work(initial) and one for prod(final). 
+A gulpfile.js using postCss. This gulpfile compiles sass like syntax to css, and then minifys for production. It also uses autoprefixer automatically add browser prefixes to all your css.
+Use two folders (initial & final are used currently but change these to whatever you use), one for work(initial) and one for prod(final). 
 
 ## Getting started
 Download or clone the repo to your local machine.
