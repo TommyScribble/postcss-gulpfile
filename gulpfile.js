@@ -5,12 +5,15 @@ const postcss = require('gulp-postcss'),
     cssImport = require('postcss-import'),
     precss = require('precss'),
     autoprefixer = require('autoprefixer'),
-    minify = require('cssnano');
+	minify = require('cssnano');
+	
+const paths = {
+	css: '*.css',
+	dist: 'dist'
+}
 
-gulp.task('css', () => {
-
-    return gulp
-    .src('initial/*.css')
+function css() {
+    return gulp.src(paths.css)
     .pipe(sourceMaps.init())
     .pipe(postcss([
         cssImport(),
@@ -19,7 +22,7 @@ gulp.task('css', () => {
         minify(),
     ]))
     .pipe(sourceMaps.write('.'))
-    .pipe(gulp.dest('final'));
-});
+    .pipe(gulp.dest(paths.dist));
+};
 
-gulp.task('default', ['css']);
+exports.css = css;
